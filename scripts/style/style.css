@@ -1,0 +1,106 @@
+.Popup > button:hover {
+    color: rgb(0, 0, 0);
+}
+
+.Roll {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    width: 35em;
+    transform: translateX(-50%);
+
+    box-sizing: border-box;
+    border-right: 2px solid rgb(40, 40, 40);
+    border-left: 2px solid rgb(40, 40, 40);
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.Roll > div {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    padding-right: 1em;
+    gap: 8px;
+
+    position: relative;
+    height: auto;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    width: 100%;
+
+    box-sizing: border-box;
+    border-bottom: 2px solid rgb(40, 40, 40);
+}
+
+.Roll > div > div {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.Roll > div > div > span.Author {
+    color: rgb(128, 128, 128);
+    cursor: pointer;
+}
+
+.Roll > div > div > span.Author:hover {
+    text-decoration: underline;
+}
+
+.Roll > div > div > span.Caption {
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+.Roll > div > .Player > video,
+.Roll > div img:not(.Player > img) {
+    max-width: 100%;
+
+    box-sizing: border-box;
+    border: 2px solid rgb(255, 255, 255);
+
+    border-radius: 8px;
+}
+
+.Roll > div > .Player > video {
+    border: none;
+}
+
+.Publish {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 8px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.Publish > * {
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+.Publish > input {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+@media screen and (max-width: 600px) {
+    .Roll {
+        width: 100%;
+    }
+
+    .Publish {
+        border: none;
+        border-radius: 0;
+        margin: 0;
+    }
+}

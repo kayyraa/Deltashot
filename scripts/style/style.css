@@ -1,0 +1,269 @@
+.Popup > button:hover {
+    color: rgb(0, 0, 0);
+}
+
+.Roll {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    width: 40em;
+    transform: translateX(-50%);
+
+    box-sizing: border-box;
+    border-right: 2px solid rgb(40, 40, 40);
+    border-left: 2px solid rgb(40, 40, 40);
+    padding-top: 8px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.Roll  >  div[post] {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    padding-right: 1em;
+    gap: 8px;
+
+    position: relative;
+    height: auto;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    width: 100%;
+
+    box-sizing: border-box;
+    border-bottom: 2px solid rgb(40, 40, 40);
+}
+
+.Roll > div[post] > div {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.Roll > div[post] > div.Author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Roll > div[post] > div.Author > img {
+    width: 2em;
+    box-sizing: border-box;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+}
+
+.Roll > div[post] > div.Author > img:hover {
+    filter: brightness(1.125);
+    scale: 1.25;
+}
+
+.Roll > div[post] > div > span.AuthorLabel {
+    color: rgb(128, 128, 128);
+    cursor: pointer;
+}
+
+.Roll > div[post] > div > span.AuthorLabel:hover {
+    text-decoration: underline;
+}
+
+.Roll > div[post] > div > span.Caption {
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+.Roll > div[post] > .Player > video,
+.Roll > div[post] img:not(.Player  >  img):is(.Media) {
+    max-width: 100%;
+
+    box-sizing: border-box;
+    border: 2px solid rgb(255, 255, 255);
+
+    border-radius: 8px;
+}
+
+.Roll > div[post] > .Loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Roll > div[post] img:not(.Media)[button] {
+    width: 1em;
+    cursor: pointer;
+    transition: scale 0.25s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+}
+
+.Roll > div[post] img:not(.Media)[button]:hover {
+    scale: 1.25;
+}
+
+.Roll > div[post] > .Player > video {
+    border: none;
+}
+
+.Roll > div[post] > div:last-child {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.Roll > div[post] > div:last-child button {
+    position: absolute;
+    top: 0;
+    right: 1em;
+    height: 2em;
+}
+
+.Roll > div[post] > div:last-child button:hover {
+    border-radius: 0;
+    border-color: transparent;
+    font-weight: 900;
+}
+
+.Roll > div[post] > div:last-child > .Tags {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    flex-basis: 100%;
+}
+
+.Roll > div[post] > div:last-child > .Tags > * {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: rgb(255, 255, 255);
+    border-radius: 100em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.Roll > div:not([post]) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    box-sizing: border-box;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+
+    padding: 8px;
+
+    text-wrap: nowrap;
+}
+
+.Roll > div:not([post]) header {
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+
+.Roll > div:not([post]) > * {
+    width: 100%;
+}
+
+.Roll > div:not([post]) button {
+    width: 100%;
+    font-weight: 600;
+}
+
+.Roll > div:not([post]) input {
+    width: calc(100% - 1em);
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.Roll > div:not([post]) > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.Roll > div:not([post]) > div > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.Roll > div:not([post]) > span {
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+.Settings {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    min-height: fit-content;
+    max-height: 20em;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.Settings > div > div button {
+    min-width: 14em;
+    border: none;
+}
+
+.Profile > div img {
+    width: 4em;
+    box-sizing: border-box;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 100%;
+}
+
+.Loader {
+    width: 5em;
+    aspect-ratio: 1;
+    background:
+        no-repeat linear-gradient(rgb(255, 255, 255) 0 0) 0 0,
+        no-repeat linear-gradient(rgb(255, 255, 255) 0 0) 0 100%,
+        no-repeat linear-gradient(rgb(255, 255, 255) 0 0) 50% 50%,
+        no-repeat linear-gradient(rgb(255, 255, 255) 0 0) 100% 0,
+        no-repeat linear-gradient(rgb(255, 255, 255) 0 0) 100% 100%;
+    animation: Loader 1s infinite alternate;
+}
+
+@keyframes Loader {
+    0%,
+    10% {
+        background-size: 25% 100%;
+    }
+    50% {
+        background-size: 25% 25%;
+    }
+    90%,
+    100% {
+        background-size: 100% 25%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .Roll {
+        width: 100%;
+    }
+
+    .Publish {
+        border: none;
+        border-radius: 0;
+        margin: 0;
+    }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="scripts/style/format.css">
+        <link rel="stylesheet" href="scripts/style/style.css">
+
+        <link rel="shortcut icon" href="images/Favicon.svg" type="image/x-icon">
+        
+        <script type="module" src="scripts/api.js"></script>
+        <script type="module" src="scripts/account.js"></script>
+        <script type="module" src="scripts/roll.js"></script>
+        <script type="module" src="scripts/hud.js"></script>
+        
+        <title>Instashot</title>
+    </head>
+    <body>
+        <div class="Roll">
+            <div class="Settings">
+                <header>Settings</header>
+                <div>
+                    <header>Account</header>
+                    <div>
+                        <button class="LogOutButton" grayscale>Log Out</button>
+                        <button class="DeleteAccountButton" color false>Delete Account</button>
+                    </div>
+                </div>
+            </div>
+            <div class="Profile">
+                <header>Profile Image</header>
+                <div>
+                    <img class="ProfileImage" src="images/DefaultUser.svg">
+                    <span class="UsernameLabel">Username</span>
+                </div>
+                <button grayscale class="ProfileImageUploadButton">Upload</button>
+                <button class="ProfileImageApplyButton">Apply</button>
+            </div>
+            <div class="Publish">
+                <header>Publish</header>
+                <button grayscale class="UploadButton">Upload</button>
+                <input class="CaptionInput" placeholder="Caption" type="text">
+                <input class="TagInput" placeholder="Tags, divide-by-commas" type="text">
+                <button class="PublishButton">Publish</button>
+            </div>
+        </div>
+        <center style="display: none;" class="Popup" form>
+            <header>Sign In</header>
+            <input class="UsernameInput" placeholder="Username" type="text">
+            <input class="PasswordInput" placeholder="Password" type="text">
+            <button class="SubmitButton">Submit</button>
+        </center>
+    </body>
+</html>
